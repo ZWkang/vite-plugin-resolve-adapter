@@ -2,22 +2,30 @@
 
 > description:
 
+This tool is capable of adapting file suffixes based on the environment when retrieving files, in order to differentiate between multiple environment logics. It is similar to Taro's environment adaptation solution, but implemented in Vite.
+
 ## Features
+
+- [x] support relative project file enable
+- [ ] enable node_modules file include suffix adapter
 
 ## Try it now
 
-## copy usage remove this please !!
+```bash
+pnpm i vite-plugin-resolve-adapter@latest
+```
 
-a simple description
+## Usage
 
-Inspired by
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite';
+import resolveAdapter from 'vite-plugin-resolve-adapter';
 
-- [antfu/starter-ts](https://github.com/antfu/starter-ts)
-- [egoist/ts-lib-starter](https://github.com/egoist/ts-lib-starter)
-
-setup a default template to build your own tool, awesome !!
-
-find all vite-plugin-resolve-adapter and replace them all!!
+export default defineConfig({
+  plugins: [resolveAdapter()],
+});
+```
 
 ## LICENSE
 
