@@ -1,4 +1,4 @@
-import { Plugin, UserConfig, createFilter, normalizePath } from 'vite';
+import { Plugin, UserConfig, createFilter } from 'vite';
 
 import nodePath from 'node:path';
 import fs from 'node:fs';
