@@ -32,14 +32,12 @@ export default function resolveEnhance(opt: ViteConfig = defaultOpts): Plugin {
       const filter = createFilter(config.include, config.exclude, {
         resolve: config.root,
       });
-
-      if (id.startsWith('.') || (importer?.endsWith('.html') && /^\w/.test(id))) {
-        const baseDir = importer ? nodePath.dirname(importer) : config.root;
-        const path = nodePath.resolve(baseDir, id);
-        const normalizedFsPath = normalizePath(path);
-
-        const newPath = resolveExtensionPath(normalizedFsPath, [config.env]);
-        if (!filter(newPath)) return;
+      const resolved = await this.resolve(id, importer, {
+        skipSelf: true,
+        ...resolveOpts,
+      });
+      if (resolved && filter(resolved.id)) {
+        const newPath = resolveExtensionPath(resolved.id, [config.env]);
         isDebug && console.log(`[adapter] ${id} -> ${newPath}`);
         return newPath;
       }
@@ -47,6 +45,13 @@ export default function resolveEnhance(opt: ViteConfig = defaultOpts): Plugin {
   };
 }
 
+/**
+ * get a path, according the extensions to detect file exists
+ * if exists, return the replace new file path.
+ * @param path
+ * @param extensions
+ * @returns
+ */
 function resolveExtensionPath(path: string, extensions: string[]) {
   const cleanId = cleanUrl(path);
   const extname = nodePath.extname(cleanId);

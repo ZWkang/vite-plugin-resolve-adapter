@@ -1,13 +1,12 @@
 # vite-plugin-resolve-adapter
 
-> description:
-
-This tool is capable of adapting file suffixes based on the environment when retrieving files, in order to differentiate between multiple environment logics. It is similar to Taro's environment adaptation solution, but implemented in Vite.
+> This tool is capable of adapting file suffixes based on the environment when retrieving files, in order to differentiate between multiple environment logics. It is similar to Taro's environment adaptation solution, but implemented in Vite.
 
 ## Features
 
 - [x] support relative project file enable
-- [ ] enable node_modules file include suffix adapter
+- [x] enable node_modules file include suffix adapter
+- [x] support alias path support suffix adapter
 
 ## Try it now
 

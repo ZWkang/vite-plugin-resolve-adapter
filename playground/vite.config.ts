@@ -11,6 +11,11 @@ export default defineConfig({
     }),
     vue(),
   ],
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
   server: {
     port: 3000,
   },
