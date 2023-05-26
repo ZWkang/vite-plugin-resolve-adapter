@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-resolve-adapter",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "packageManager": "pnpm@7.9.0",
   "description": "> description:",
   "publishConfig": {
