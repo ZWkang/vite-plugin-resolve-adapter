@@ -9,7 +9,9 @@ export type ViteConfig = Readonly<
   Omit<UserConfig, 'plugins' | 'assetsInclude' | 'optimizeDeps' | 'worker'> & {
     include?: UserConfig['assetsInclude'];
     exclude?: UserConfig['assetsInclude'];
-    env: string;
+    env?: string;
+    root?: string;
+    extension?: string[];
   }
 >;
 
