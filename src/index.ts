@@ -1,4 +1,5 @@
-import { Plugin, UserConfig, createFilter, type ResolvedConfig } from 'vite';
+import type { Plugin, UserConfig, ResolvedConfig } from 'vite';
+import { createFilter } from 'vite';
 
 import nodePath from 'node:path';
 import fs from 'node:fs';
