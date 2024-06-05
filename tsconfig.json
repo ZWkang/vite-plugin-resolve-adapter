@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "esnext",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -14,9 +17,17 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "typeRoots": ["node_modules/@types", "types"],
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
     "rootDir": "."
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
