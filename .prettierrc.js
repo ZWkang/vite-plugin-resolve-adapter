@@ -1,1 +1,1 @@
-module.exports = require('zwkang-prettier-config');
+module.exports = require('zwkang-prettier-config')

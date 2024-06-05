@@ -18,12 +18,12 @@ pnpm i vite-plugin-resolve-adapter@latest
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite';
-import resolveAdapter from 'vite-plugin-resolve-adapter';
+import { defineConfig } from 'vite'
+import resolveAdapter from 'vite-plugin-resolve-adapter'
 
 export default defineConfig({
   plugins: [resolveAdapter()],
-});
+})
 ```
 
 ## LICENSE

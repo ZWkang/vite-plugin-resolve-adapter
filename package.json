@@ -1,9 +1,9 @@
 {
   "name": "vite-plugin-resolve-adapter",
+  "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@7.33.7",
   "description": "> description:",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -11,6 +11,7 @@
     "name": "zwkang",
     "email": "kang95630@gmail.com"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zwkang/vite-plugin-resolve-adapter.git"
@@ -21,8 +22,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "main": "./dist/index.js",
@@ -42,7 +43,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "lint": "eslint --cache .",
-    "lint:fix": "eslint --cache . --fix",
+    "lint:fix": "eslint --fix",
     "test": "vitest run",
     "build": "tsup",
     "start": "tsx src/index.ts",
@@ -50,11 +51,18 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
+  "peerDependencies": {
+    "vite": "^3.1.0 || ^4.0.0 || ^5.0.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^2.20.0",
+    "@types/node": "^20.14.2"
+  },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.13.2",
     "@types/debug": "^4.1.12",
     "bumpp": "^8.2.1",
     "debug": "^4.3.5",
-    "@antfu/eslint-config": "^2.13.2",
     "eslint-config-alloy": "^4.9.0",
     "prettier": "^2.8.8",
     "tsup": "^6.7.0",
@@ -63,13 +71,5 @@
     "vite": "^5.0.12",
     "vitest": "^0.22.1",
     "zwkang-prettier-config": "^0.0.3"
-  },
-  "license": "MIT",
-  "peerDependencies": {
-    "vite": "^3.1.0 || ^4.0.0 || ^5.0.0"
-  },
-  "dependencies": {
-    "@antfu/eslint-config": "^2.20.0",
-    "@types/node": "^20.14.2"
   }
 }

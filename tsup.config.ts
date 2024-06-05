@@ -1,4 +1,4 @@
-import { Options } from 'tsup';
+import type { Options } from 'tsup'
 
 const config: Options = {
   splitting: true,
@@ -8,6 +8,6 @@ const config: Options = {
   dts: true,
   outDir: './dist',
   external: ['vite'],
-};
+}
 
-export default config;
+export default config
